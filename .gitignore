@@ -1,0 +1,13 @@
+# Mounted workspace volumes — populated by the container at runtime,
+# not part of this repo's source.
+lunabot_ws/
+ros2_experiments/
+
+# ROS2 / colcon build artifacts (in case either dir above is ever tracked)
+build/
+install/
+log/
+
+# Misc
+*.log
+.DS_Store
