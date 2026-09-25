@@ -16,14 +16,14 @@
 #      set so files written by the container land as your user, not root
 #
 # Usage:
-#   curl -fsSL https://raw.githubusercontent.com/<you>/<repo>/main/install.sh | bash
+#   curl -fsSL https://raw.githubusercontent.com/Cesar-Alvarez0809/CoD_lunabot_docker_setup/main/install.sh | bash
 #   # or, from inside an existing clone:
 #   ./install.sh
 # ============================================================================
 set -euo pipefail
 
-REPO_URL="${REPO_URL:-https://github.com/<you>/<repo>.git}"
-REPO_DIR_NAME="${REPO_DIR_NAME:-lunabot-docker}"
+REPO_URL="${REPO_URL:-https://github.com/Cesar-Alvarez0809/CoD_lunabot_docker_setup.git}"
+REPO_DIR_NAME="${REPO_DIR_NAME:-CoD_lunabot_docker_setup}"
 
 log()  { echo -e "\033[1;36m[install]\033[0m $*"; }
 warn() { echo -e "\033[1;33m[install]\033[0m $*"; }
