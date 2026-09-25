@@ -1,6 +1,8 @@
-# lunabot-docker
+# CoD_lunabot_docker_setup
 
 Dockerized ROS 2 Humble development environment for [lunabot_ros](https://github.com/College-of-DuPage-Lunabotics/lunabot_ros).
+
+Repo: https://github.com/Cesar-Alvarez0809/CoD_lunabot_docker_setup
 
 Everything the workspace needs (ROS 2 Humble, Livox SDK, xacro, Gazebo, Nav2, rosdep, etc.)
 is baked into the image at build time. On first container start, `entrypoint.sh` clones
@@ -14,8 +16,8 @@ Tested on Fedora. Also supports WSL2 and other Linux distros via `install.sh`.
 **Already have Docker installed and just want to run it?**
 
 ```bash
-git clone https://github.com/<you>/<repo>.git
-cd <repo>
+git clone https://github.com/Cesar-Alvarez0809/CoD_lunabot_docker_setup.git
+cd CoD_lunabot_docker_setup
 HOST_UID=$(id -u) HOST_GID=$(id -g) docker compose build
 HOST_UID=$(id -u) HOST_GID=$(id -g) docker compose up -d
 docker exec -it lunabot_ros2 bash
@@ -27,7 +29,7 @@ Use `install.sh` — it detects your OS, installs Docker if it's missing, sets u
 forwarding for GUI tools (rviz2, gazebo, rqt), clones this repo, and starts the container:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/<you>/<repo>/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/Cesar-Alvarez0809/CoD_lunabot_docker_setup/main/install.sh | bash
 ```
 
 or, from a clone you already have:
@@ -76,19 +78,18 @@ docker exec -it lunabot_ros2 bash -c "rm -f /root/lunabot_ws/.setup_complete && 
 - **WSL2 without WSLg:** run an X server on Windows (e.g. VcXsrv) and point `DISPLAY`
   at your Windows host's IP before starting the container.
 
-## Publishing this repo yourself
+## Pushing local changes
 
-This folder is a plain directory, not yet a git repo. To publish it:
+If you're editing these files locally and the folder isn't a git repo yet:
 
 ```bash
-cd lunabot-docker
+cd CoD_lunabot_docker_setup
 git init
+git remote add origin https://github.com/Cesar-Alvarez0809/CoD_lunabot_docker_setup.git
 git add .
 git commit -m "Initial commit: dockerized lunabot_ros2 dev environment"
 git branch -M main
-git remote add origin https://github.com/<you>/<repo>.git
 git push -u origin main
 ```
 
-Then update the `REPO_URL` default near the top of `install.sh` (and in this README)
-to match your actual repo URL, so the one-liner `curl | bash` install works for others.
+If it's already cloned from GitHub, just commit and push as usual.
