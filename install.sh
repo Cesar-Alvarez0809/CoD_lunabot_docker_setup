@@ -60,7 +60,7 @@ install_docker() {
             sudo apt-get update
             sudo apt-get install -y ca-certificates curl gnupg
             sudo install -m 0755 -d /etc/apt/keyrings
-            curl -fsSL "https://download.docker.com/linux/${DISTRO_ID}/gpg" -o /etc/apt/keyrings/docker.asc
+            sudo curl -fsSL "https://download.docker.com/linux/${DISTRO_ID}/gpg" -o /etc/apt/keyrings/docker.asc
             sudo chmod a+r /etc/apt/keyrings/docker.asc
             ARCH="$(dpkg --print-architecture)"
             CODENAME="$(. /etc/os-release && echo "$VERSION_CODENAME")"
