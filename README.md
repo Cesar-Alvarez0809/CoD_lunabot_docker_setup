@@ -46,7 +46,7 @@ Use `install.sh` — it detects your OS, installs Docker if it's missing, sets u
 forwarding for GUI tools (rviz2, gazebo, rqt), clones this repo, and starts the container:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/Cesar-Alvarez0809/CoD_lunabot_docker_setup/main/install.sh | bash
+sudo curl -fsSL https://raw.githubusercontent.com/Cesar-Alvarez0809/CoD_lunabot_docker_setup/main/install.sh | bash
 ```
 
 or, from a clone you already have:
