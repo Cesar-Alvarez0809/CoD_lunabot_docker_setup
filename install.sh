@@ -82,8 +82,9 @@ install_docker() {
 
     if ! groups "$USER" | grep -q docker; then
         sudo usermod -aG docker "$USER"
-        warn "Added $USER to the 'docker' group. Log out/in (or run 'newgrp docker')"
-        warn "for this to take effect before re-running this script."
+        warn "Added $USER to the 'docker' group."
+        warn "Close and reopen your terminal, then run this script again."
+        exit 0
     fi
 }
 
