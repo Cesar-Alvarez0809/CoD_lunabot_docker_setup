@@ -13,6 +13,23 @@ Tested on Fedora. Also supports WSL2 and other Linux distros via `install.sh`.
 
 ## Quick start
 
+**On Windows? Set up WSL2 first.**
+
+`install.sh` is a Linux script, so Windows users need WSL2 and Ubuntu before running it:
+
+1. Open **PowerShell as Administrator** (right-click → *Run as administrator*) and run:
+
+```bash
+wsl --install -d Ubuntu-22.04
+```
+
+2. **Restart your computer** if prompted (needed the first time WSL is installed).
+3. Open **Ubuntu 22.04** from the Start menu. On first launch it will ask you to create a Linux username and password.
+4. In that Ubuntu terminal, continue with the `install.sh` steps below.
+
+> GUI apps (rviz2, gazebo) work automatically on Windows 11 via WSLg.
+
+
 **Already have Docker installed and just want to run it?**
 
 ```bash
